@@ -1,0 +1,27 @@
+
+VCCS(with PWL function) = Solar Source: It Represents the satellite's solar panel array and the Maximum Power Point Tracking (MPPT) system that provides power and charges battery  when satellite is NOT in Eclipse.
+
+Series Resistance of 100 m ohm Immediately After the VCCS to simulate the EPS Loss.
+
+Diode: Prevents the backward flow of current from the 7.4V source to the VCCS. 
+
+Ideal 7.4V Source + Series Resistor = Battery Model : Represents the two-cell Li-ion cells  including a small internal resistance of 0.1 ohms to show  voltage droop under load.
+
+On-Board Computer (OBC) Load [55 ohms]: Represents the satellite’s central flight computer managing command/telemetry and payload control.
+
+Timed Switched Resistors (TT&C / Payload)[13.7 ohms]: Uses approximately 4 W of power to represent high-power subsystems that are switched on and off, such as the radio transmitter or a science instrument.
+
+A VCVS source Connected to a MOSFET(n channel) = Simulates a timed switch which allows the current to pass through the TT&C load only for short bursts of time.
+
+Payload sun‑only[27.4 ohms] = This is a payload which only turns on When the Sun is OUT.
+
+
+
+
+
+
+
+
+
+
+
